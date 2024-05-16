@@ -13,6 +13,7 @@
   --primary-color: rgba(252, 86, 3, .8);
   --secondary-color: rgba(3, 169, 252, .5);
   --text-color: black;
+  --text-white: white;
   scroll-behavior: smooth;
 }
 
@@ -63,7 +64,7 @@ body {
 }
 
 .header h1  {
-  font-family: var(--text-color);
+  font-family: var(--primary-fonts);
   font-size: 3rem;
   text-decoration: overline;
   color: var(--primary-color);
@@ -131,6 +132,69 @@ nav ul li{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.section-1 {
+  background-image: linear-gradient(rgba(0,0, 0,.3), rgba(0,0,0,.3)), url(./assets/home_img2.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.heros p {
+  width: 50rem;
+  padding: 2rem 2rem;
+  font-size: larger;
+  font-family: var(--primary-fonts);
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  font-style: bold;
+}
+
+.heros .hero-title h1 {
+  font-family: var(--secondary-fonts);
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 5rem;
+  font-style: bold;
+  font-weight: 900;
+}
+
+.heros .hero-title h2{
+  font-family: var(--primary-fonts);
+  color: var(--text-white);
+  text-align: center;
+  font-size: 5rem;
+  font-style: bold;
+  font-weight: 900;
+}
+
+.heros-link a {
+  text-decoration: none;
+  list-style: none;
+  gap: 3rem;
+  color: red;
+  text-align: center;
+  padding: 1rem 1rem;
+  border-radius: .5rem;
+  font-size: 2rem;
+}
+
+.heros-link a:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-white);
+  transition: all 1s ease-in-out;
+  transform: scale(1.02);
+}
+
+.heros-link {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+
 }
 
 
