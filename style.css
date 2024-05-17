@@ -25,8 +25,7 @@ html {
 body {
   margin: 0 2rem 2rem 2rem;
   border: 2px red solid;
-
-
+  background-color: antiquewhite;
 }
 
 
@@ -38,7 +37,9 @@ body {
   align-items: center;
   padding: 1rem 1.5rem;
   border: 2PX solid yellow;
-
+  background-color: var(--secondary-color);
+  width: 100%;
+  position: fixed;
 }
 .header_apartments_logo_name {
   display: grid;
@@ -84,13 +85,32 @@ nav ul li a  {
   font-size: x-large;
   font-style: bold;
   font-family: var(--primary-fonts);
+}
 
+nav ul li a::after {
+  content: '';
+  transform: scaleX(0);
+  position: absolute;
+  width: 70px;
+  height: 3px;
+  background: black;
+  border-radius: .5rem;
+  transform-origin: right;
+  transition: transform .5s;
+  left: auto;
+  bottom: -6px;
 
 }
+
+nav ul li a:hover::after{
+  transform: scale(1);
+}
+
 
 nav ul li{
   text-decoration: none;
   list-style: none;
+
 }
 
 .header_register_login {
@@ -109,19 +129,22 @@ nav ul li{
   font-size: x-large;
   font-style: bold;
   font-family: var(--primary-fonts);
+  outline: none;
+  cursor: pointer;
 }
 
 .header_register_login a:hover{
   transition: all 1s ease-in-out;
-  padding: .8rem .8rem;
   transform: scale(1);
+  background-color: aliceblue;
+  color: black;
 }
 
 .header_register_login li a{
   /* border: 2px solid var(--text-color); */
-  background-color: var(--secondary-color);
   padding: .6rem;
   border-radius: .7rem;
+  border: 2px solid red;
 }
 
 
@@ -132,10 +155,13 @@ nav ul li{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: -1;
+  margin-top: 8.5rem;
 }
 
 .section-1 {
-  background-image: linear-gradient(rgba(0,0, 0,.3), rgba(0,0,0,.3)), url(./assets/home_img2.jpg);
+  background-image: linear-gradient(rgba(15, 8, 8, 0.1), rgba(17, 10, 10, 0.1)), url(./assets/home_img2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -148,8 +174,8 @@ nav ul li{
   font-size: larger;
   font-family: var(--primary-fonts);
   text-align: center;
-  font-size: 2rem;
-  color: white;
+  font-size: 2.5rem;
+  color: var(--text-color);
   text-align: center;
   font-style: bold;
 }
@@ -165,7 +191,7 @@ nav ul li{
 
 .heros .hero-title h2{
   font-family: var(--primary-fonts);
-  color: var(--text-white);
+  color: var(--text-color);
   text-align: center;
   font-size: 5rem;
   font-style: bold;
@@ -173,33 +199,102 @@ nav ul li{
 }
 
 .heros-link a {
+  cursor: pointer;
   text-decoration: none;
-  list-style: none;
   gap: 3rem;
-  color: red;
+  color: black;
   text-align: center;
   padding: 1rem 1rem;
   border-radius: .5rem;
   font-size: 2rem;
+  border: 2px solid yellow;
+
 }
 
 .heros-link a:hover {
-  background-color: var(--secondary-color);
-  color: var(--text-white);
-  transition: all 1s ease-in-out;
-  transform: scale(1.02);
+  background-color: var(--primary-color);
 }
+
 
 .heros-link {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 3rem;
+}
 
+.heros-banner {
+  padding: 1rem 1rem;
+  border-radius: 1rem;
+  z-index: 99;
+  background-color: var(--secondary-color);
 }
 
 
 /* ##################  ABOUT ############################# */
+.about {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
+.about h1 {
+  font-size: 5rem;
+  color: var(--text-color);
+  font-family: var(--secondary-fonts);
+  color: var(--primary-color);
+  font-style: bold;
+  margin-top: 4REM;
+}
+
+.about-items {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  padding: 2rem ;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.about-items .about-img img {
+  width: 50rem;
+  height: 40rem;
+  border-radius: 2rem;
+}
+
+.about-items .about-img img:hover{
+  transform: scale(1.02);
+  transition: all5s ease-in-out;
+}
+
+.about-items .about_desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.about .about-items h1 {
+  font-size: 5rem;
+  color: var(--text-color);
+  font-family: var(--primary-fonts);
+  font-style: bold;
+  padding-top: 0;
+
+}
+
+.about-items  p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: bold;
+  font-size: 1.2rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
 
 
 /* ################## AMENITIES ############################# */
