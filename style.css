@@ -26,6 +26,10 @@ body {
   margin: 0 2rem 2rem 2rem;
   border: 2px red solid;
   background-color: antiquewhite;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 
@@ -35,11 +39,12 @@ body {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 1.5rem;
-  border: 2PX solid yellow;
-  background-color: var(--secondary-color);
+  background-color: var(--text-white);
   width: 100%;
+  z-index: 100;
+  position: relative;
   position: fixed;
+  border-bottom: 5px solid yellow;
 }
 .header_apartments_logo_name {
   display: grid;
@@ -66,9 +71,15 @@ body {
 
 .header h1  {
   font-family: var(--primary-fonts);
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-decoration: overline;
   color: var(--primary-color);
+}
+nav{
+  position: relative;
+  width: 30%;
+  margin-right: 1rem;
+  margin-left: 1rem;
 }
 
 nav ul {
@@ -85,10 +96,11 @@ nav ul li a  {
   font-size: x-large;
   font-style: bold;
   font-family: var(--primary-fonts);
+  color: var(--primary-color);
 }
 
 nav ul li a::after {
-  content: '';
+  /* content: '';
   transform: scaleX(0);
   position: absolute;
   width: 70px;
@@ -98,12 +110,15 @@ nav ul li a::after {
   transform-origin: right;
   transition: transform .5s;
   left: auto;
-  bottom: -6px;
+  bottom: 6px; */
 
 }
 
-nav ul li a:hover::after{
+nav ul li a:hover{
   transform: scale(1);
+  text-decoration: solid;
+  border-bottom: 2px solid brown;
+
 }
 
 
@@ -115,6 +130,9 @@ nav ul li{
 
 .header_register_login {
   display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
 }
 
@@ -131,12 +149,13 @@ nav ul li{
   font-family: var(--primary-fonts);
   outline: none;
   cursor: pointer;
+  color: var(--primary-color);
 }
 
 .header_register_login a:hover{
   transition: all 1s ease-in-out;
   transform: scale(1);
-  background-color: aliceblue;
+  background-color: var(--secondary-color);
   color: black;
 }
 
@@ -150,14 +169,12 @@ nav ul li{
 
 /* ////////////////// HEROS SECTION ///////////////////// */
 .heros {
-  min-height: 85vh;
+  min-height: 98vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   z-index: -1;
-  margin-top: 8.5rem;
 }
 
 .section-1 {
@@ -165,6 +182,7 @@ nav ul li{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  border: 2px solid blue;
 }
 
 
@@ -199,7 +217,6 @@ nav ul li{
 }
 
 .heros-link a {
-  cursor: pointer;
   text-decoration: none;
   gap: 3rem;
   color: black;
@@ -241,13 +258,16 @@ nav ul li{
   align-items: center;
 }
 
-.about h1 {
-  font-size: 5rem;
+h1 {
+  font-size: 4rem;
   color: var(--text-color);
   font-family: var(--secondary-fonts);
   color: var(--primary-color);
   font-style: bold;
-  margin-top: 4REM;
+}
+
+.about h1 {
+  /* margin-top: 7rem; */
 }
 
 .about-items {
@@ -279,7 +299,7 @@ nav ul li{
 
 }
 
-.about .about-items h1 {
+ h2 {
   font-size: 5rem;
   color: var(--text-color);
   font-family: var(--primary-fonts);
@@ -299,9 +319,334 @@ nav ul li{
 
 /* ################## AMENITIES ############################# */
 
+.amenities {
+  min-height: 80vh;
+  display:grid;
+  grid-template-areas: 'header'
+                        'body';
+  align-items: center;
+  justify-content: center;
+}
+.aminities_header {
+  grid-area: header;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.amenity-items {
+  grid-area:body;
+}
+.amenities .parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.amenity_item {
+ background-color:  var(--text-white) ;
+ display: flex;
+ flex-direction:column;
+ justify-content: center;
+ align-items: center;
+ width: 25rem;
+ gap: 1rem 1rem;
+ border-radius: 1rem;
+ box-shadow: saddlebrown;
+}
+
+.amenity-items .amenity_img img{
+  width: 10rem;
+  height: 10rem;
+  margin-top: 3px;
+  border-radius: 50%;
+  border: 2px solid var(--text-color);
+}
+
+.amenity_item h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.amenity_item p {
+  color:var(--text-color)
+}
+
+.amenity_item p{
+  text-align: justify;
+  padding: .7rem;
+  font-size: 1.3rem;
+}
+
+.amenity_item .heros-link {
+  margin-bottom: .4rem;
+}
+
 
 /* ################## PRICING ############################# */
+/* .available_apartments {
+  min-height: 80vh;
+  display:grid;
+  grid-template-areas: 'header'
+                        'body';
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
 
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ .apartment-items .apartment_image img{
+  width: 30rem;
+  height: 25rem;
+  padding: .5rem .5rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.apartment-items {
+  width: 30rem;
+  background-color:  var(--text-white) ;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: saddlebrown;
+}
+.apartment-items img {
+  width: 100%;
+  height: 10rem;
+}
+.apartment-items h3 {
+  text-align: left;
+  display: flex;
+  justify-items: left;
+}
+
+.amenity_item {
+  border: 2px red solid;
+}
+
+.apartment-items .apartment_description {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start; 
+  padding: .5rem .5rem;
+  align-items: start;
+}
+.apartment-items .apartment_description h3 {
+  color: var(--text-color);
+  font-size: 1.4rem;
+
+}
+
+.apartment_description{
+  height: 17rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.apartment_description p {
+  color: rgb(82, 74, 74);
+  margin-top: 1rem;
+  font-size: 2.2rem;
+  font-weight: 500;
+  font-style: bold;
+  color: var(--primary-color);
+}
+
+.apartment-items h4 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+.apartment_description h3, p {
+  position: relative;
+  top: 0rem;
+  left: 0rem;
+}
+
+.apartments a{
+  font-size: 1.2rem;
+
+}
+.apartments{
+  width: 29rem;
+  margin-top:3.5rem;
+  gap: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.apartments p {
+  background: var(--primary-color);
+  border-radius: .5rem;
+  align-items: center;
+  padding: .4rem .6rem;
+  color: var(--text-color);
+  display: inline;
+  margin-top: 0;
+  font-size: 2rem;
+}
+.apartments a{
+  margin: 0;
+} */
+
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.apartments {
+  /* width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border: 2px solid red;
+  position: relative; */
+  min-height: 80vh;
+  display:grid;
+
+  grid-template-areas: 'header'
+                        'body';
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.apartment_item_1{
+  grid-area: header;
+}
+
+.apartment_item_2{
+  grid-area: body;
+}
+
+
+.apartments .apartments_items {
+  border-radius: 1rem;
+  padding: .2rem .5rem ;
+  display: flex;
+  background-color: aqua;
+  border: 1px solid red;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25rem;
+  height: 30rem;
+}
+
+.apartments_items img {
+  width: 100%;
+  border-radius: .5rem;
+  height: 14rem;
+}
+
+.apartments .apartment_description {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+      'header'
+      'main'
+      'footer'
+      'sub_footer';
+}
+.apartment_item_1{
+  grid-area: header;
+}
+
+.apartment_item_2{
+  grid-area: main;
+}
+
+.apartment_item_3{
+  grid-area: footer;
+}
+.apartment_item_4{
+  grid-area: sub_footer;
+}
+.apartment_description .availability{    
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.apartments_items .apartment_description h4, h3{
+  color: black;
+  font-size: .9rem;
+  font-style: italic;
+  padding: .2rem;
+}
+
+.apartments_items .apartment_description p{
+  font-size: 1rem;
+  color: black;
+  padding: .2rem;
+  height: 7rem;
+  overflow: hidden;
+}
+
+.apartments_items .apartment_description h2{
+  color: black;
+  font-size: larger;
+  padding: .2rem;    
+}
+
+.apartments_items .apartment_price {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: .4rem;
+}
+
+.apartments_items .apartment_price a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: .5rem .5rem;
+ border-radius: .5rem;
+ font-size: bold;
+ color: white;
+ background-color: black;
+}
+
+.apartments_items .apartment_price .apartment_view {
+  border: 1px solid blue;
+  background: transparent;
+  color: black;
+}
+
+.apartments_items .apartment_price .apartment_view:hover{
+  background: white;
+  transition: all ease-in .5s;
+}
 
 /* ################## CONTACTS ############################# */
 
