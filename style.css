@@ -801,6 +801,98 @@ form button {
 }
 /* ################## FOOTER ############################# */
 
+.footer {
+  background-color: aquamarine;
+  border-top: 2px solid red;
+  margin-top: 10rem;
+}
 
+.parent_footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.parent_footer .companys_logo a img{
+  border-radius: 50%;
+  width: 10rem;
+  margin-top: 2rem;
+}
+.companys_logo h1 {
+  text-align: center;
+  text-decoration: dashed underline;
+}
+.companys_logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.major_links {
+  padding:1rem 1rem;
+  margin-top: 2rem;
+}
+
+.major_links h3 {
+  font-size: 2.5rem;
+  font-style: normal;
+  text-decoration:underline dashed ;
+  margin-bottom: 1rem;
+}
+
+
+.major_links ul li::before{ 
+  padding-right: 1rem;
+  content: "\00BB"; 
+} 
+.major_links li{
+  font-size: 1.5rem;
+  padding: .2rem;
+}
+
+.major_links ul li a{
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-style: normal;
+  color: var(--text-color);
+}
+
+
+.social_media{
+  padding: 1rem 1rem;
+  margin-top: 2rem;
+}
+
+.social_media h3{
+  text-decoration: underline dashed;
+}
+
+.subscribe {
+  margin-top: 4%;
+}
+.subscribe h3 {
+  text-decoration: dashed underline;
+  font-size: 2.5rem;
+  font-style: normal;
+  margin-bottom: 1rem;
+}
+
+.subscribe input{
+  height: 3rem;
+  width: 75%;
+  border-radius: .5rem;
+  border: 1px solid black;
+}
+
+.subscribe button {
+  height: 3rem;
+  width: 7rem;
+}
+
+.subscribe p {
+  font-style: italic;
+  margin-top: 3em;
+  font-size: 1.3rem;
+}
 
 
