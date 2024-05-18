@@ -10,8 +10,8 @@
 :root {
   --secondary-fonts: 'Dancing Script', serif;
   --primary-fonts: 'Roboto', serif;
-  --primary-color: rgba(252, 86, 3, .8);
-  --secondary-color: rgba(3, 169, 252, .5);
+  --primary-color: #052659;
+  --secondary-color: #5483b0;
   --text-color: black;
   --text-white: white;
   scroll-behavior: smooth;
@@ -170,7 +170,7 @@ nav ul li{
   z-index: -1;
 }
 
-.heros {
+.heros-1 {
   z-index: 1;
   background-image: linear-gradient(rgba(15, 8, 8, 0.1), rgba(17, 10, 10, 0.1)), url(./assets/home_img2.jpg);
   background-position: center;
@@ -178,6 +178,7 @@ nav ul li{
   border-bottom-left-radius: 1rem;
   border-bottom-right-radius: 1rem;
 }
+
 
 .heros p {
   width: 50rem;
@@ -803,7 +804,7 @@ form button {
 .footer {
   margin-top: 3rem;
   background-color: aquamarine;
-  position: relative;
+  height: auto;
 }
 
 .parent_footer {
@@ -989,19 +990,18 @@ form button {
   #contacts .contacts_parent .contacts_us{
     align-items: center;
     width: 90%;
-    height: 30rem;
   }
 
   #contacts .contacts_parent .contacts_us h2{
-    font-size: 3rem;
+    font-size: 7rem;
   }
   #contacts .contacts_parent .contacts_us .org_contacts p{
       font-size: 2rem;
     text-align: center;
+    border: 2px solid green;
   }
   #contacts .contacts_parent .get_in_touch{
     width: 90%;
-    height: 30rem;
   }
   form .input_box{
     margin-top: 1rem;
@@ -1189,12 +1189,51 @@ form button {
   .about .about-items .about-img img{
     width: 95%;
   }
-
-  /* ############# Contact us ################# */
-
- 
+}
 
 
+/* ??????????????? Extra - small devices. ?????????????????????? */
+
+@media screen and (max-width:485px) {
+  body{
+    overflow-x:hidden;
+  }
+  .header .header_apartments_logo_name h1{
+    font-size: 3.5rem;
+  }
+  .header{
+    gap: .5rem;
+  }
+  .header nav ul li a{
+    font-size: 1.7rem;
+  }
+  .header .header_register_login li a{
+    font-size: 1.7rem;
+  }
 
 
+  /* ???????????????????????  Heros sections ??????????????? */
+  .heros-1{
+    background: none;
+  }
+  .heros .heros-banner{
+    width: 90%;
+    align-items: center;
+  }
+
+
+
+  /* ????????????? Contacts Us ????????????????? */
+
+  #contacts .contacts_parent .contacts_us h2{
+    font-size: 3rem;
+  }
+    #contacts .contacts_parent .contacts_us .org_contacts p{
+    font-size: 1.8rem;
+  }
+
+  #contacts .contacts_parent .get_in_touch h1{
+    font-size: 2.5rem;
+  }
+  
 }
