@@ -971,6 +971,12 @@ form button {
   .about .about-items .about-img img{
     width: 95%;
   }
+  .social_media h3{
+    text-align: center;
+  }
+  .social_media ul{
+    gap: 2rem;
+  }
 
   /* ############# Contact us ################# */
   #contacts .contacts_parent {
@@ -996,8 +1002,9 @@ form button {
   #contacts .contacts_parent .get_in_touch{
     width: 90%;
     height: 30rem;
-
-
+  }
+  form .input_box{
+    margin-top: 1rem;
   }
 
   .footer .parent_footer{
@@ -1020,13 +1027,11 @@ form button {
     flex-direction: column;
     gap: 1rem;
   }
-
-  .header_apartments_logo_name a img{
-    display: none;
+  .header_apartments_logo_name{
+    margin-top: 1rem;
   }
-  
   .header_apartments_logo_name h1{
-    font-size: 3rem;
+    font-size: 4rem;
   }
   .header_register_login{
     margin-bottom: 1rem;
@@ -1038,19 +1043,20 @@ form button {
 
   }
   .heros-banner{
-    width: 40rem;
+    margin-top: 15rem;
+    width: 50rem;
     justify-content: center;
     align-items: center;
   }
 
   .heros-banner .hero-title h1 {
-    font-size: 3rem;
-  }
-  .heros-banner .hero-title h2{
     font-size: 4rem;
   }
+  .heros-banner .hero-title h2{
+    font-size: 5rem;
+  }
   .heros-banner .hero-title p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: auto;
   }
 
@@ -1062,11 +1068,11 @@ form button {
 
   .about .about-items .about_desc h2{
     margin-top:2rem ;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .about .about-items .about_desc p{
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .about .about-items .about-img img{
     width: 95%;
@@ -1087,7 +1093,7 @@ form button {
   }
 
   #contacts .contacts_parent .contacts_us h2{
-    font-size: 3rem;
+    font-size: 4rem;
   }
   #contacts .contacts_parent .contacts_us .org_contacts p{
       font-size: 2rem;
@@ -1096,9 +1102,20 @@ form button {
   #contacts .contacts_parent .get_in_touch{
     width: 90%;
     height: 30rem;
-
-
   }
+
+  .social_media  ul{
+    gap: 2rem;
+  }
+  .social_media h3{
+    text-align: center;
+  }
+
+  form .input_box{
+    margin-top: 1rem;
+  }
+
+  /* ???????????????? Foooter section ???????????????????? */
 
   .footer .parent_footer{
     align-items: center;
@@ -1110,7 +1127,7 @@ form button {
  
 
 /* ?????????????????????????? Large sizes ????????????????????????? */
-@media screen and (min-width:811px) and (max-width:1200px){
+@media screen and (min-width:811px) and (max-width:1020px){
   body{
     overflow-x: hidden;
   }
@@ -1120,9 +1137,8 @@ form button {
     flex-direction: column;
     gap: 1rem;
   }
-
-  .header_apartments_logo_name a img{
-    display: none;
+  .header_apartments_logo_name{
+    margin-top: 1rem;
   }
   
   .header_apartments_logo_name h1{
@@ -1138,19 +1154,19 @@ form button {
 
   }
   .heros-banner{
-    width: 40rem;
-    justify-content: center;
-    align-items: center;
+    margin-top: 15rem;
+    width: 60rem;
+    
   }
 
   .heros-banner .hero-title h1 {
-    font-size: 3rem;
+    font-size: 5rem;
   }
   .heros-banner .hero-title h2{
-    font-size: 4rem;
+    font-size: 5rem;
   }
   .heros-banner .hero-title p{
-    font-size: 1.5rem;
+    font-size: 2rem;
     width: auto;
   }
 
@@ -1164,7 +1180,7 @@ form button {
 
   .about .about-items .about_desc h2{
     margin-top:2rem ;
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .about .about-items .about_desc p{
