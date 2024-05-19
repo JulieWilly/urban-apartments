@@ -88,13 +88,13 @@ nav ul {
 }
 
 nav ul li a  {
-  border: red solid 2px;
+  /* border: red solid 2px; */
   text-decoration: none;
   text-transform: capitalize;
   font-size: x-large;
   font-style: bold;
   font-family: var(--primary-fonts);
-  color: var(--primary-color);
+  color: var(--text-white);
 }
 
 /* nav ul li a::after { */
@@ -115,7 +115,7 @@ nav ul li a  {
 nav ul li a:hover{
   background: transparent;
   text-decoration: solid;
-  border-bottom: 2px solid var(--text-white);
+  border-bottom: 2px solid var(--text-color);
 
 }
 nav ul li{
@@ -142,15 +142,15 @@ nav ul li{
   font-style: bold;
   font-family: var(--primary-fonts);
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--text-white);
   border: 2px solid var(--webpage-background-color);
 }
 
 .header_register_login a:hover{
   transition: all 1s ease-in-out;
   transform: scale(1);
-  background-color: var(--hover-color-background);
-  color: var(--text-white);
+  background-color: var(--text-white);
+  color: var(--text-color);
 }
 
 .header_register_login li a{
@@ -197,7 +197,7 @@ nav ul li{
 
 .heros .hero-title h1 {
   font-family: var(--secondary-fonts);
-  color: var(--primary-color);
+  color: var(--primary-white);
   text-align: center;
   font-size: 5rem;
   font-style: bold;
@@ -206,7 +206,7 @@ nav ul li{
 
 .heros .hero-title h2{
   font-family: var(--primary-fonts);
-  color: var(--text-color);
+  color: var(--text-white);
   text-align: center;
   font-size: 4rem;
   font-style: bold;
@@ -386,13 +386,13 @@ hr{
 
 .amenity_item p {
   color:var(--text-color);
-  height: 11rem;
+  height: 8rem;
   overflow: hidden;
+  margin: 1rem;
 }
 
 .amenity_item p{
   text-align: justify;
-  padding: .7rem;
   font-size: 1.3rem;
 }
 
@@ -1210,7 +1210,6 @@ form button:hover{
 
   .about .about-items .about_desc p{
     font-size: 1.5rem;
-    border: red 2px solid;
   }
   .about .about-items .about-img img{
     width: 95%;
